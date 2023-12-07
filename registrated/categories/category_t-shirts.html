@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>modA - Футболки</title>
+    <link rel="icon" type="image/png" href="../../images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../../styles.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar"></div>
+        <div class="logo">
+            <a href="../homepage.html"><p>MOD A</p></a>
+        </div>
+        <p class="contact-field"> +380667788990 </p>
+        <p class="contact-field" style="left: 28.5%;"> mod_a@gmail.com </p>
+        <input type="text" class="search-field" placeholder="Знайдіть одяг саме для Вас ..." onkeyup="search_categories()">
+        <div id="results" class="results" onclick="clearSearch()"></div>
+        <div class="search-icon"></div>
+
+        <div class="icon-button" style="left: 85.5%; background-image: url('../../images/log_in_reg.png');" title="Авторизація" onclick="showModal_login_reg()"></div>
+        <div id="login-reg" class="login-reg" style="display: none;">
+            <div class="login-reg-content">
+                <p>Бажаєте увійти в новий обліковий запис? Вийдіть з попереднього</p>
+                <button onclick="hideModal_login_reg()">OK</button>
+            </div>
+        </div>
+
+        <div class="icon-button" style="left: 92.5%; background-image: url('../../images/log_out.png');" title="Вихід" onclick="showModal_logout_reg()"></div>
+        <div id="logout-reg" class="logout-reg" style="display: none;">
+            <div class="logout-reg-content">
+                <p>Ви впевнені, що хочете вийти з облікового запису?</p>
+                <button onclick="window.location.href='../../unregistrated/homepage.html'">Так</button>
+                <button onclick="hideModal_logout_reg()">Скасувати</button>
+            </div>
+        </div>
+
+        <div class="category-bar">
+            <a href="category_new.html" ><p>НОВЕ</p></a>
+            <a href="category_jeans.html"><p>ДЖИНСИ</p></a>
+            <a href="category_sweatshirts.html"><p>КОФТИ</p></a>
+            <a href="category_peajackets.html"><p>КУРТКИ</p></a>
+            <a href="category_coats.html"><p>ПАЛЬТА</p></a>
+            <a href="category_jackets.html"><p>ПІДЖАКИ</p></a>
+            <a href="category_costumes.html"><p>КОСТЮМИ</p></a>
+            <a href="category_sweaters.html"><p>СВЕТРИ</p></a>
+            <a href="category_shirts.html"><p>СОРОЧКИ</p></a>
+            <a href="category_t-shirts.html"><p class="active">ФУТБОЛКИ</p></a>
+        </div>
+    </header>
+
+    <div class="type-bar">
+        <a href="category_woman.html"><p>ЖІНОЧИЙ</p></a>
+        <a href="category_man.html"><p>ЧОЛОВІЧИЙ</p></a>
+        <a href="category_children.html"><p>ДИТЯЧИЙ</p></a>
+    </div>
+
+
+    <div class="product-container">
+        <a href="../products/Бавовняна футболка Vans.html">
+            <div class="product-photo" style="background-image: url('../../photos/Бавовняна футболка Vans.webp');">
+                <div class="product-name">Бавовняна футболка Vans</div>
+                <div class="product-name rounded">1099</div>
+            </div>
+        </a>
+        <a href="../products/Бавовняна футболка adidas.html">
+            <div class="product-photo" style="background-image: url('../../photos/Бавовняна футболка adidas.webp');">
+                <div class="product-name">Бавовняна футболка adidas</div>
+                <div class="product-name rounded">1029</div>
+            </div>
+        </a>
+        <a href="../products/Бавовняна футболка HUGO.html">
+            <div class="product-photo" style="background-image: url('../../photos/Бавовняна футболка HUGO.webp');">
+                <div class="product-name">Бавовняна футболка HUGO</div>
+                <div class="product-name rounded">1699</div>
+            </div>
+        </a>
+        <a href="../products/Бавовняна футболка Armani Exchange.html">
+            <div class="product-photo" style="background-image: url('../../photos/Бавовняна футболка Armani Exchange.webp');">
+                <div class="product-name">Бавовняна футболка Armani Exchange</div>
+                <div class="product-name rounded">1799</div>
+            </div>
+        </a>
+    </div>
+
+
+    <div class="footer">
+        <p>Офіційний інтернет магазин MOD A© 2023</p>
+        <p>Графік роботи call-центру: Пн-Пт з 10:00 до 18:00</p>
+    </div>
+    <script src="../../jscript.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
