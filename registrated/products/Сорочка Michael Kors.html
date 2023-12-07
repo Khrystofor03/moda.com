@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Сорочка Michael Kors</title>
+    <link rel="icon" type="image/png" href="../../images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../../styles.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar"></div>
+        <div class="logo">
+            <a href="../homepage.html"><p>MOD A</p></a>
+        </div>
+        <p class="contact-field"> +380667788990 </p>
+        <p class="contact-field" style="left: 28.5%;"> mod_a@gmail.com </p>
+        <input type="text" class="search-field" placeholder="Знайдіть одяг саме для Вас ..." onkeyup="search_products()">
+        <div id="results" class="results" onclick="clearSearch()"></div>
+        <div class="search-icon"></div>
+        
+
+        <div class="icon-button" style="left: 85.5%; background-image: url('../../images/log_in_reg.png');" title="Авторизація" onclick="showModal_login_reg()"></div>
+        <div id="login-reg" class="login-reg" style="display: none;">
+            <div class="login-reg-content">
+                <p>Бажаєте увійти в новий обліковий запис? Вийдіть з попереднього</p>
+                <button onclick="hideModal_login_reg()">OK</button>
+            </div>
+        </div>
+
+        <div class="icon-button" style="left: 92.5%; background-image: url('../../images/log_out.png');" title="Вихід" onclick="showModal_logout_reg()"></div>
+        <div id="logout-reg" class="logout-reg" style="display: none;">
+            <div class="logout-reg-content">
+                <p>Ви впевнені, що хочете вийти з облікового запису?</p>
+                <button onclick="window.location.href='../../unregistrated/homepage.html'">Так</button>
+                <button onclick="hideModal_logout_reg()">Скасувати</button>
+            </div>
+        </div>
+
+        <div class="category-bar">
+            <a href="../categories/category_new.html"><p>НОВЕ</p></a>
+            <a href="../categories/category_jeans.html"><p>ДЖИНСИ</p></a>
+            <a href="../categories/category_sweatshirts.html"><p>КОФТИ</p></a>
+            <a href="../categories/category_peajackets.html"><p>КУРТКИ</p></a>
+            <a href="../categories/category_coats.html"><p>ПАЛЬТА</p></a>
+            <a href="../categories/category_jackets.html"><p>ПІДЖАКИ</p></a>
+            <a href="../categories/category_costumes.html"><p>КОСТЮМИ</p></a>
+            <a href="../categories/category_sweaters.html"><p>СВЕТРИ</p></a>
+            <a href="../categories/category_shirts.html"><p>СОРОЧКИ</p></a>
+            <a href="../categories/category_t-shirts.html"><p>ФУТБОЛКИ</p></a>
+        </div>
+    </header>
+
+    <img class="image-left" src="../../photos/Сорочка Michael Kors.webp" alt="">
+
+    <div class="description-container">
+        <h1>Опис товару</h1>
+        <p>- Крій slim.</p>
+        <p>- Довгий рукав.</p>
+        <p>- Злегка ущільнений італійський комір spread.</p>
+        <p>- Манжети на ґудзиках.</p>
+        <p>- Застібається на гудзики.</p>
+        <p>- Тонка, нееластична тканина.</p>
+        <p>- Обхват коміра: 40 cm.</p>
+        <p>- Довжина рукава: 67 cm.</p>
+        <p>- Довжина: 74 cm.</p>
+        <p>- Ширина під пахвами: 56 cm.</p>
+        <p>- Ширина плечей: 43 cm.</p>
+        <p>- Параметри вказані для розміру: 41.</p>
+        <p>Склад: 98% Бавовна, 2% Еластан</p>
+        <p>ID Товару: 9BYX-KDM0CP_99X</p>
+        <p>Код виробника: MK0DS01204</p>
+    </div>
+
+
+    <div class="name" style="top: 100px">
+        <h1>Сорочка Michael Kors</h1>
+    </div>
+    <div class="name" style="top: 115px">
+        <p>чоловіча колір чорний slim з італійським коміром</p>
+    </div>
+    <div class="name" style="top: 160px">
+        <h2>Ціна: 2999 грн<h2>
+    </div>
+
+    <div class="dropdown-size">
+        <select id="size-select">
+            <option value="" disabled selected>Виберіть розмір</option>
+            <option value="XXS">XXS</option>
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="XXL">XXL</option>
+        </select>
+    </div>
+
+    <button class="order-button" onclick="checkSizeAndShowModal()">Замовити</button>
+    <div id="order" class="order" style="display: none;">
+        <div class="order-content">
+            <button class="close-button" onclick="hideModal_order()">X</button>
+            <p>Виберіть спосіб оплати:</p>
+            <button class="cash-payment" onclick="showModal_confirm()">При отриманні</button>
+            <button class="card-payment" onclick="paymentUnavailable()">Карткою</button>
+        </div>
+    </div>
+    <div id="confirm" class="order" style="display: none;">
+        <div class="order-content">
+            <button class="close-button" onclick="hideModal_confirm()">X</button>
+            <p>Ви впевнені, що хочете замовити цей товар?</p>
+            <button class="confirm-button" onclick="orderProduct()">Так</button>
+            <button class="cancel-button" onclick="hideModal_confirm()">Скасувати</button>
+        </div>
+    </div>
+
+    <div class="delivery-container">
+        <h1>Доставка</h1>
+        <p>Товар, придбаний на MOD A може бути доставлений: а) У відділення Нова Пошта; б) Кур'єром Meest ПОШТА.</p>
+
+        <p>В умовах воєнного стану modA.com не може гарантувати строків доставки. Стандартний термін доставки складає 4-9 робочих днів.</p>
+
+        <p>Вартість доставки - 99 грн.</p>
+
+        <p>Доставка замовлень БЕЗКОШТОВНА при покупці на суму від 1000 грн.</p>
+
+        <p>Доставка усіх замовлень здійснюється міжнародною поштово-логістичною компанією Meest ПОШТА. Після прибуття замовлення в Україну, посилка передається компанії Нова Пошта на доставку у її відділення (у разі вибору Відділення Нова Пошта в якості бажаного виду доставки).</p>
+    </div>
+
+    <div class="return-container">
+        <h1>Повернення</h1>
+        <p>Придбаний в магазині  modA.com товар ви завжди можете повернути протягом 30 календарних днів з моменту отримання посилки, за умови, якщо він не був у вжитку, а його оригінальна упаковка (безпосередньо та, в якій ви отримали сам товар – це коробка від взуття чи пакет від одягу, аксесуарів) товарний вигляд і споживчі властивості (етикетки, ярлики, що містять характеристики товару) збережені.</p>
+    </div>
+
+
+    <div class="footer">
+        <p>Офіційний інтернет магазин MOD A© 2023</p>
+        <p>Графік роботи call-центру: Пн-Пт з 10:00 до 18:00</p>
+    </div>
+    <script src="../../jscript.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
