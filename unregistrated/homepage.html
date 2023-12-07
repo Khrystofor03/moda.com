@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>modA - головна</title>
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar"></div>
+        <div class="logo">
+            <a href="homepage.html"><p>MOD A</p></a>
+        </div>
+        <p class="contact-field"> +380667788990 </p>
+        <p class="contact-field" style="left: 28.5%;"> mod_a@gmail.com </p>
+        <input type="text" class="search-field" placeholder="Знайдіть одяг саме для Вас ..." onkeyup="search_homepage()">
+        <div id="results" class="results" onclick="clearSearch()"></div>
+        <div class="search-icon"></div>
+
+        <div class="icon-button" style="left: 85.5%; background-image: url('../images/log_in.png');" title="Авторизація" onclick="showModal_login_unreg()"></div>
+        <div id="login-ureg" class="login-ureg" style="display: none;">
+            <div class="login-ureg-content">
+                <h2>Авторизація</h2>
+                <label for="login">Логін</label>
+                <input type="text" id="login" name="login">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password">
+                <button onclick="login_homepage()">Увійти</button>
+                <button class="cancel-button" onclick="hideModal_login_unreg()">Скасувати</button>
+            </div>
+        </div>
+
+        <div class="icon-button" style="left: 92.5%; background-image: url('../images/log_out.png');" title="Вихід" onclick="showModal_logout_unreg()"></div>
+        <div id="logout-unreg" class="logout-unreg" style="display: none;">
+            <div class="logout-unreg-content">
+                <p>Ви не пройшли авторизацію, тому ця функція недоступна!</p>
+                <button onclick="hideModal_logout_unreg()">OK</button>
+            </div>
+        </div>
+
+
+        <div class="category-bar">
+            <a href="categories/category_new.html"><p>НОВЕ</p></a>
+            <a href="categories/category_jeans.html"><p>ДЖИНСИ</p></a>
+            <a href="categories/category_sweatshirts.html"><p>КОФТИ</p></a>
+            <a href="categories/category_peajackets.html"><p>КУРТКИ</p></a>
+            <a href="categories/category_coats.html"><p>ПАЛЬТА</p></a>
+            <a href="categories/category_jackets.html"><p>ПІДЖАКИ</p></a>
+            <a href="categories/category_costumes.html"><p>КОСТЮМИ</p></a>
+            <a href="categories/category_sweaters.html"><p>СВЕТРИ</p></a>
+            <a href="categories/category_shirts.html"><p>СОРОЧКИ</p></a>
+            <a href="categories/category_t-shirts.html"><p>ФУТБОЛКИ</p></a>
+        </div>
+    </header>
+
+    <div class="square-container">
+        <a href="categories/category_man.html">
+            <div class="square" style="background-image: url('../images/man.jpg');">
+                <p>Чоловічий</p>
+            </div>
+        </a>
+        <a href="categories/category_woman.html">
+            <div class="square" style="background-image: url('../images/woman.jpg');">
+                <p>Жіночий</p>
+            </div>
+        </a>
+        <a href="categories/category_children.html">
+            <div class="square" style="background-image: url('../images/child.jpg');">
+                <p>Дитячий</p>
+            </div>
+        </a>
+    </div>
+
+    <div class="footer">
+        <p>Офіційний інтернет магазин MOD A© 2023</p>
+        <p>Графік роботи call-центру: Пн-Пт з 10:00 до 18:00</p>
+    </div>
+    <script src="../jscript.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+

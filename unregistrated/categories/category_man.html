@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>modA - Чоловічий</title>
+    <link rel="icon" type="image/png" href="../../images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../../styles.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar"></div>
+        <div class="logo">
+            <a href="../homepage.html"><p>MOD A</p></a>
+        </div>
+        <p class="contact-field"> +380667788990 </p>
+        <p class="contact-field" style="left: 28.5%;"> mod_a@gmail.com </p>
+        <input type="text" class="search-field" placeholder="Знайдіть одяг саме для Вас ..." onkeyup="search_categories()">
+        <div id="results" class="results" onclick="clearSearch()"></div>
+        <div class="search-icon"></div>
+
+        <div class="icon-button" style="left: 85.5%; background-image: url('../../images/log_in.png');" title="Авторизація" onclick="showModal_login_unreg()"></div>
+        <div id="login-ureg" class="login-ureg" style="display: none;">
+            <div class="login-ureg-content">
+                <h2>Авторизація</h2>
+                <label for="login">Логін</label>
+                <input type="text" id="login" name="login">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password">
+                <button onclick="login_else()">Увійти</button>
+                <button class="cancel-button" onclick="hideModal_login_unreg()">Скасувати</button>
+            </div>
+        </div>
+
+
+        <div class="icon-button" style="left: 92.5%; background-image: url('../../images/log_out.png');" title="Вихід" onclick="showModal_logout_unreg()"></div>
+        <div id="logout-unreg" class="logout-unreg" style="display: none;">
+            <div class="logout-unreg-content">
+                <p>Ви не пройшли авторизацію, тому ця функція недоступна!</p>
+                <button onclick="hideModal_logout_unreg()">OK</button>
+            </div>
+        </div>
+
+        <div class="category-bar">
+            <a href="category_new.html" ><p>НОВЕ</p></a>
+            <a href="category_jeans.html"><p>ДЖИНСИ</p></a>
+            <a href="category_sweatshirts.html"><p>КОФТИ</p></a>
+            <a href="category_peajackets.html"><p>КУРТКИ</p></a>
+            <a href="category_coats.html"><p>ПАЛЬТА</p></a>
+            <a href="category_jackets.html"><p>ПІДЖАКИ</p></a>
+            <a href="category_costumes.html"><p>КОСТЮМИ</p></a>
+            <a href="category_sweaters.html"><p>СВЕТРИ</p></a>
+            <a href="category_shirts.html"><p>СОРОЧКИ</p></a>
+            <a href="category_t-shirts.html"><p>ФУТБОЛКИ</p></a>
+        </div>
+    </header>
+
+    <div class="type-bar">
+        <a href="category_woman.html"><p>ЖІНОЧИЙ</p></a>
+        <a href="category_man.html"><p class="active">ЧОЛОВІЧИЙ</p></a>
+        <a href="category_children.html"><p>ДИТЯЧИЙ</p></a>
+    </div>
+
+
+    <div class="product-container">
+        <a href="../products/Бавовняна футболка Tommy Jeans.html">
+            <div class="product-photo" style="background-image: url('../../photos/Бавовняна футболка Tommy Jeans.webp');">
+                <div class="product-name">Бавовняна футболка Tommy Jeans</div>
+                <div class="product-name rounded">2489</div>
+            </div>
+        </a>
+        <a href="../products/Джинси Armani Exchange.html">
+            <div class="product-photo" style="background-image: url('../../photos/Джинси Armani Exchange.webp');">
+                <div class="product-name">Джинси Armani Exchange</div>
+                <div class="product-name rounded">3070</div>
+            </div>
+        </a>
+        <a href="../products/Джинси Medicine.html">
+            <div class="product-photo" style="background-image: url('../../photos/Джинси Medicine.webp');">
+                <div class="product-name">Джинси Medicine</div>
+                <div class="product-name rounded">849</div>
+            </div>
+        </a>
+        <a href="../products/Джинси Calvin Klein Jeans.html">
+            <div class="product-photo" style="background-image: url('../../photos/Джинси Calvin Klein Jeans.webp');">
+                <div class="product-name">Джинси Calvin Klein Jeans</div>
+                <div class="product-name rounded">3299</div>
+            </div>
+        </a>
+    </div>
+
+    <div class="product-container" style="top: 550px;">
+        <a href="../products/Джинси Guess Drake.html">
+            <div class="product-photo" style="background-image: url('../../photos/Джинси Guess Drake.webp');">
+                <div class="product-name">Джинси Guess Drake</div>
+                <div class="product-name rounded">2999</div>
+            </div>
+        </a>
+        <a href="../products/Бавовняна кофта adidas Originals.html">
+            <div class="product-photo" style="background-image: url('../../photos/Бавовняна кофта adidas Originals.webp');">
+                <div class="product-name">Бавовняна кофта adidas Originals</div>
+                <div class="product-name rounded">1899</div>
+            </div>
+        </a>
+        <a href="../products/Безрукавка Calvin Klein Jeans.html">
+            <div class="product-photo" style="background-image: url('../../photos/Безрукавка Calvin Klein Jeans.webp');">
+                <div class="product-name">Безрукавка Calvin Klein Jeans</div>
+                <div class="product-name rounded">5599</div>
+            </div>
+        </a>
+        <a href="../products/Вовняне пальто Medicine.html">
+            <div class="product-photo" style="background-image: url('../../photos/Вовняне пальто Medicine.webp');">
+                <div class="product-name">Вовняне пальто Medicine</div>
+                <div class="product-name rounded">3999</div>
+            </div>
+        </a>
+    </div>
+
+    <div class="product-container" style="top: 900px;">
+        <a href="../products/Вовняне пальто BOSS.html">
+            <div class="product-photo" style="background-image: url('../../photos/Вовняне пальто BOSS.webp');">
+                <div class="product-name">Вовняне пальто BOSS</div>
+                <div class="product-name rounded">16990</div>
+            </div>
+        </a>
+        <a href="../products/Піджак Sisley.html">
+            <div class="product-photo" style="background-image: url('../../photos/Піджак Sisley.webp');">
+                <div class="product-name">Піджак Sisley</div>
+                <div class="product-name rounded">4699</div>
+            </div>
+        </a>
+        <a href="../products/Костюм з домішкою вовни Tiger Of Sweden.html">
+            <div class="product-photo" style="background-image: url('../../photos/Костюм з домішкою вовни Tiger Of Sweden.webp');">
+                <div class="product-name">Костюм з домішкою вовни Tiger Of Sweden</div>
+                <div class="product-name rounded">16990</div>
+            </div>
+        </a>
+        <a href="../products/Костюм Lindbergh.html">
+            <div class="product-photo" style="background-image: url('../../photos/Костюм Lindbergh.webp');">
+                <div class="product-name">Костюм Lindbergh</div>
+                <div class="product-name rounded">4469</div>
+            </div>
+        </a>
+    </div>
+
+    <div class="product-container" style="top: 1250px;">
+        <a href="../products/Вовняний костюм Tiger Of Sweden.html">
+            <div class="product-photo" style="background-image: url('../../photos/Вовняний костюм Tiger Of Sweden.webp');">
+                <div class="product-name">Вовняний костюм Tiger Of Sweden</div>
+                <div class="product-name rounded">16990</div>
+            </div>
+        </a>
+        <a href="../products/Вовняний костюм BOSS.html">
+            <div class="product-photo" style="background-image: url('../../photos/Вовняний костюм BOSS.webp');">
+                <div class="product-name">Вовняний костюм BOSS</div>
+                <div class="product-name rounded">24990</div>
+            </div>
+        </a>
+        <a href="../products/Вовняний светр Armani Exchange.html">
+            <div class="product-photo" style="background-image: url('../../photos/Вовняний светр Armani Exchange.webp');">
+                <div class="product-name">Вовняний светр Armani Exchange</div>
+                <div class="product-name rounded">3699</div>
+            </div>
+        </a>
+        <a href="../products/Бавовняний светр Pepe Jeans.html">
+            <div class="product-photo" style="background-image: url('../../photos/Бавовняний светр Pepe Jeans.webp');">
+                <div class="product-name">Бавовняний светр Pepe Jeans</div>
+                <div class="product-name rounded">2299</div>
+            </div>
+        </a>
+    </div>
+
+    <div class="product-container" style="top: 1600px;">
+        <a href="../products/Сорочка United Colors of Benetton.html">
+            <div class="product-photo" style="background-image: url('../../photos/Сорочка United Colors of Benetton.webp');">
+                <div class="product-name">Сорочка United Colors of Benetton</div>
+                <div class="product-name rounded">1699</div>
+            </div>
+        </a>
+        <a href="../products/Сорочка Michael Kors.html">
+            <div class="product-photo" style="background-image: url('../../photos/Сорочка Michael Kors.webp');">
+                <div class="product-name">Сорочка Michael Kors</div>
+                <div class="product-name rounded">2999</div>
+            </div>
+        </a>
+        <a href="../products/Бавовняна футболка Vans.html">
+            <div class="product-photo" style="background-image: url('../../photos/Бавовняна футболка Vans.webp');">
+                <div class="product-name">Бавовняна футболка Vans</div>
+                <div class="product-name rounded">1099</div>
+            </div>
+        </a>
+        <a href="../products/Бавовняна футболка adidas.html">
+            <div class="product-photo" style="background-image: url('../../photos/Бавовняна футболка adidas.webp');">
+                <div class="product-name">Бавовняна футболка adidas</div>
+                <div class="product-name rounded">1029</div>
+            </div>
+        </a>
+    </div>
+
+
+    <div class="footer" style="top: 1950px;">
+        <p>Офіційний інтернет магазин MOD A© 2023</p>
+        <p>Графік роботи call-центру: Пн-Пт з 10:00 до 18:00</p>
+    </div>
+    <script src="../../jscript.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Дитячі штани Coccodrillo</title>
+    <link rel="icon" type="image/png" href="../../images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="../../styles.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar"></div>
+        <div class="logo">
+            <a href="../homepage.html"><p>MOD A</p></a>
+        </div>
+        <p class="contact-field"> +380667788990 </p>
+        <p class="contact-field" style="left: 28.5%;"> mod_a@gmail.com </p>
+        <input type="text" class="search-field" placeholder="Знайдіть одяг саме для Вас ..." onkeyup="search_products()">
+        <div id="results" class="results" onclick="clearSearch()"></div>
+        <div class="search-icon"></div>
+        
+
+        <div class="icon-button" style="left: 85.5%; background-image: url('../../images/log_in.png');" title="Авторизація" onclick="showModal_login_unreg()"></div>
+        <div id="login-ureg" class="login-ureg" style="display: none;">
+            <div class="login-ureg-content">
+                <h2>Авторизація</h2>
+                <label for="login">Логін</label>
+                <input type="text" id="login" name="login">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password">
+                <button onclick="login_else()">Увійти</button>
+                <button class="cancel-button" onclick="hideModal_login_unreg()">Скасувати</button>
+            </div>
+        </div>
+
+        <div class="icon-button" style="left: 92.5%; background-image: url('../../images/log_out.png');" title="Вихід" onclick="showModal_logout_unreg()"></div>
+        <div id="logout-unreg" class="logout-unreg" style="display: none;">
+            <div class="logout-unreg-content">
+                <p>Ви не пройшли авторизацію, тому ця функція недоступна!</p>
+                <button onclick="hideModal_logout_unreg()">OK</button>
+            </div>
+        </div>
+
+        <div class="category-bar">
+            <a href="../categories/category_new.html"><p>НОВЕ</p></a>
+            <a href="../categories/category_jeans.html"><p>ДЖИНСИ</p></a>
+            <a href="../categories/category_sweatshirts.html"><p>КОФТИ</p></a>
+            <a href="../categories/category_peajackets.html"><p>КУРТКИ</p></a>
+            <a href="../categories/category_coats.html"><p>ПАЛЬТА</p></a>
+            <a href="../categories/category_jackets.html"><p>ПІДЖАКИ</p></a>
+            <a href="../categories/category_costumes.html"><p>КОСТЮМИ</p></a>
+            <a href="../categories/category_sweaters.html"><p>СВЕТРИ</p></a>
+            <a href="../categories/category_shirts.html"><p>СОРОЧКИ</p></a>
+            <a href="../categories/category_t-shirts.html"><p>ФУТБОЛКИ</p></a>
+        </div>
+    </header>
+
+    <img class="image-left" src="../../photos/Дитячі штани Coccodrillo.webp" alt="">
+
+    <div class="description-container">
+        <h1>Опис товару</h1>
+        <p>Штани із колекції Coccodrillo. Модель виготовлена із гладкого матеріалу.</p>
+        <p>- Прямий фасон.</p>
+        <p>- Резинка в поясі.</p>
+        <p>- Застібка на блискавку і фастекс.</p>
+        <p>- Талія із внутрішнім регулюванням ширини.</p>
+        <p>- Кишені без застібки.</p>
+        <p>- Нижній край на резинці.</p>
+        <p>- Світловідбиваючі елементи підвищують видимість і безпеку під час темряви.</p>
+        <p>Склад: 100% Поліестер</p>
+        <p>ID Товару: 9BYX-SPK080_99X</p>
+        <p>Код виробника: ZC3119701OBK</p>
+    </div>
+
+
+    <div class="name" style="top: 100px">
+        <h1>Дитячі штани Coccodrillo</h1>
+    </div>
+    <div class="name" style="top: 115px">
+        <p>колір чорний</p>
+    </div>
+    <div class="name" style="top: 160px">
+        <h2>Ціна: 859 грн<h2>
+    </div>
+
+    <div class="dropdown-size">
+        <select>
+            <option value="" disabled selected>Виберіть розмір</option>
+            <option value="XXS">XXS</option>
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="XXL">XXL</option>
+        </select>
+    </div>
+
+    <button class="order-button" onclick="showModal_logout_unreg()">Замовити</button>
+
+    <div class="delivery-container">
+        <h1>Доставка</h1>
+        <p>Товар, придбаний на MOD A може бути доставлений: а) У відділення Нова Пошта; б) Кур'єром Meest ПОШТА.</p>
+
+        <p>В умовах воєнного стану modA.com не може гарантувати строків доставки. Стандартний термін доставки складає 4-9 робочих днів.</p>
+
+        <p>Вартість доставки - 99 грн.</p>
+
+        <p>Доставка замовлень БЕЗКОШТОВНА при покупці на суму від 1000 грн.</p>
+
+        <p>Доставка усіх замовлень здійснюється міжнародною поштово-логістичною компанією Meest ПОШТА. Після прибуття замовлення в Україну, посилка передається компанії Нова Пошта на доставку у її відділення (у разі вибору Відділення Нова Пошта в якості бажаного виду доставки).</p>
+    </div>
+
+    <div class="return-container">
+        <h1>Повернення</h1>
+        <p>Придбаний в магазині  modA.com товар ви завжди можете повернути протягом 30 календарних днів з моменту отримання посилки, за умови, якщо він не був у вжитку, а його оригінальна упаковка (безпосередньо та, в якій ви отримали сам товар – це коробка від взуття чи пакет від одягу, аксесуарів) товарний вигляд і споживчі властивості (етикетки, ярлики, що містять характеристики товару) збережені.</p>
+    </div>
+
+
+    <div class="footer">
+        <p>Офіційний інтернет магазин MOD A© 2023</p>
+        <p>Графік роботи call-центру: Пн-Пт з 10:00 до 18:00</p>
+    </div>
+    <script src="../../jscript.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
